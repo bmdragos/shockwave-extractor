@@ -1,0 +1,3 @@
+[submodule "LibreShockwave"]
+	path = LibreShockwave
+	url = https://github.com/bmdragos/LibreShockwave.git

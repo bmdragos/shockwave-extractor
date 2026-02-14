@@ -1,0 +1,12 @@
+# Compiled Java classes
+*.class
+
+# Build artifacts
+*.jar
+!LibreShockwave/
+
+# OS files
+.DS_Store
+
+# Test output
+output/
