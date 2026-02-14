@@ -64,9 +64,9 @@ if [ "$EXT" = "dcr" ] || [ "$EXT" = "dxr" ]; then
     fi
 
     DECOMPILE_DIR="$OUTPUT_DIR/decompiled"
-    mkdir -p "$DECOMPILE_DIR"
-
     BASENAME="$(basename "$INPUT_FILE" ".$EXT")"
+    mkdir -p "$DECOMPILE_DIR/$BASENAME"
+
     DIR_FILE="$DECOMPILE_DIR/$BASENAME/$BASENAME.dir"
 
     projectorrays decompile "$INPUT_FILE" --dump-scripts --dump-json -o "$DECOMPILE_DIR/$BASENAME/"
