@@ -112,6 +112,15 @@ This project uses:
 
 Director versions 4 through 12 are supported by the underlying SDK.
 
+## AI Agent Pipeline
+
+This toolkit is designed as the first stage of an automated game preservation pipeline. The extraction output — clean PNGs, fixed WAVs, and readable Lingo scripts — is everything an LLM needs to rebuild a game in HTML5.
+
+See **[AGENT_PIPELINE.md](AGENT_PIPELINE.md)** for the full guide, including:
+- How to feed extraction output into an LLM for rebuilding
+- Automated sensitivity analysis to catch threshold/physics bugs before playtesting
+- Visual comparison, state machine verification, and asset coverage checks
+
 ## Credits
 
 - **[LibreShockwave](https://github.com/Quackster/LibreShockwave)** by Quackster — the Java SDK that makes all of this possible
