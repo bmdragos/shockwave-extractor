@@ -2,7 +2,7 @@ FROM eclipse-temurin:21-jdk AS builder
 
 # Install build dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    git make g++ zlib1g-dev libmpg123-dev libboost-all-dev python3 \
+    git make g++ zlib1g-dev libmpg123-dev libboost-all-dev python3 xxd \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /build
@@ -35,7 +35,7 @@ RUN javac -cp "/opt/shockwave-extractor/lib/sdk-0.1.0.jar:/opt/shockwave-extract
 FROM eclipse-temurin:21-jre
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    python3 libmpg123-0 zlib1g libboost-system1.74.0 \
+    python3 libmpg123-0 \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy built artifacts

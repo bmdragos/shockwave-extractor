@@ -31,9 +31,9 @@ DIR_FILE="$INPUT_FILE"
 if [ "$EXT" = "dcr" ] || [ "$EXT" = "dxr" ] || [ "$EXT" = "cct" ]; then
     echo "=== Decompiling $EXT → .dir ==="
     DECOMPILE_DIR="$OUTPUT_DIR/decompiled"
-    mkdir -p "$DECOMPILE_DIR"
-
     BASENAME="$(basename "$INPUT_FILE" ".$EXT")"
+    mkdir -p "$DECOMPILE_DIR/$BASENAME"
+
     projectorrays decompile "$INPUT_FILE" --dump-scripts --dump-json -o "$DECOMPILE_DIR/$BASENAME/"
 
     DIR_FILE=$(find "$DECOMPILE_DIR" -name "*.dir" -o -name "*.cst" | head -1)
